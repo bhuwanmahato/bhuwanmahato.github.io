@@ -2743,7 +2743,7 @@ input, select, textarea {
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
 					background-color: #333333;
-					opacity: 75%;
+					opacity: 95%;
 				}
 
 			body:not(.is-touch) .tiles article:hover .content {
