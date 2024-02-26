@@ -119,8 +119,8 @@ input, select, textarea {
 		color: #150F27;
 		font-family: "Poppins", Helvetica, sans-serif;
 		font-size: 16pt;
-		font-weight: 300;
-		line-height: 1.75;
+		font-weight: 100 ;
+		line-height: 1.40;
 	}
 
 		@media screen and (max-width: 1680px) {
@@ -145,13 +145,13 @@ input, select, textarea {
 		-ms-transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		transition: border-bottom-color 0.2s ease, color 0.2s ease;
 		text-decoration: none;
-		color: #585858;
+		color: #000000;
 		border-bottom: dotted 1px rgba(88, 88, 88, 0.5);
 	}
 
 		a:hover {
 			border-bottom-color: transparent;
-			color: #f2849e !important;
+			color: #1B8ECD !important;
 		}
 
 	strong, b {
@@ -164,7 +164,8 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
-		color: #6B7280;
+		color: #343434;
+		font-weight: 100 !important;
 	}
 
 	h1 {
@@ -2683,7 +2684,7 @@ input, select, textarea {
 				}
 
 				.tiles article > a:hover {
-					color: #ffffff !important;
+					color: #000000 !important;
 				}
 
 				.tiles article > a h2 {
@@ -2704,7 +2705,7 @@ input, select, textarea {
 
 					.tiles article > a .content > :last-child {
 						margin-bottom: 0;
-						color: #cccccc;
+						color: #484848;
 					}
 
 			.tiles article.style1 > .image:before {
@@ -2744,8 +2745,8 @@ input, select, textarea {
 				}
 
 				body:not(.is-touch) .tiles article:hover > .image:after {
-					background-color: #161029;
-					opacity: 85%;
+					background-color: #ffffff;
+					opacity: 90%;
 				}
 
 			body:not(.is-touch) .tiles article:hover .content {
@@ -2840,7 +2841,7 @@ input, select, textarea {
 			border-bottom: 0;
 			color: inherit;
 			font-weight: 300;
-			letter-spacing: 0.35em;
+			letter-spacing: 0.25em;
 			margin: 0 0 2.5em 0;
 			text-decoration: none;
 			text-transform: uppercase;
