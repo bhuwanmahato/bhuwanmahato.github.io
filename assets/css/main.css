@@ -165,7 +165,8 @@ input, select, textarea {
 	p {
 		margin: 0 0 2em 0;
 		color: #343434;
-		font-weight: 100 !important;
+		font-weight: 50 !important;
+  		font-size: 12pt !important;
 	}
 
 	h1 {
@@ -2574,7 +2575,7 @@ input, select, textarea {
 		-webkit-flex-wrap: wrap;
 		-ms-flex-wrap: wrap;
 		flex-wrap: wrap;
-		postiion: relative;
+		/* postiion: relative; */
 		margin: -2.5em 0 0 -2.5em;
 	}
 
@@ -2860,7 +2861,9 @@ input, select, textarea {
 				#header .logo .symbol img {
 					display: block;
 					width: 4.2em;
-					height: 5em;
+					height: 80px;
+					border-radius: 50%;
+					object-fit: cover;
 				}
 
 		#header nav {
