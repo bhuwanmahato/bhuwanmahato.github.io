@@ -752,7 +752,7 @@ section,
 
 .hero .hero-buttons .btn-primary:hover,
 .hero .hero-buttons .btn-secondary:hover {
-  background-color: #3393ff;
+  background-color: var(--accent-color);
   color: #ffffff;
 }
 
@@ -944,7 +944,7 @@ section,
   transition: color 0.3s ease;
 }
 .card:hover .card-title {
-  color: #007bff;
+  color: var(--accent-color);
 }
 
 .card-description {
@@ -953,6 +953,12 @@ section,
   flex-grow: 1;
   overflow: hidden;
 }
+
+.card-subDescription {
+  color: #a6a8aa;
+  font-size: 14px;
+}
+
 .blue-line {
   width: 50px; /* Full width */
   height: 3px;
