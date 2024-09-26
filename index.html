@@ -6,6 +6,9 @@
     <title>Bhuwan.Portfolio</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <!--p5 sketch background-->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="assets/p5/hero-background.js" defer></script> -->
 
     <!-- Favicons -->
     <link href="assets/img/logo.png" rel="icon" />
@@ -28,7 +31,7 @@
       href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <!-- <link href="assets/vendor/aos/aos.css" rel="stylesheet" /> -->
     <link
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
@@ -92,34 +95,34 @@
 
     <main class="main">
       <!-- Hero Section -->
-      <section id="hero" class="hero section dark-background">
-        <img src="assets/img/hero-img.jpg" alt="" data-aos="fade-in" />
-
-        <div
-          class="container d-flex flex-column align-items-center justify-content-center text-center"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        >
-          <img
-            src="assets/img/profblacknwhite.png"
-            alt="Profile Photo"
-            class="profile-photo"
-          />
-          <h2 class="hero-title">&#128075; Hi! I am Bhuwan</h2>
-          <p class="hero-description">
-            I’m a designer with a passion for crafting user-centered and
-            visually appealing digital experiences. I enjoy solving problems,
-            building things, and helping people.
-          </p>
-          <p>
-            <span
-              class="typed"
-              data-typed-items="Designer, Developer, Freelancer, Photographer"
-            ></span>
-          </p>
-          <div class="hero-buttons">
-            <a href="resume.pdf" class="btn btn-primary">Resume</a>
-            <a href="#portfolio" class="btn btn-secondary">Portfolio</a>
+      <section id="hero" class="hero section">
+        <!-- <img src="assets/img/hero.jpg" alt="" data-aos="fade-in" /> -->
+        <div id="heroSketch"></div>
+        <div class="hero-content">
+          <div
+            class="container d-flex flex-column align-items-center justify-content-center text-center"
+          >
+            <img
+              src="assets/img/profblacknwhite.png"
+              alt="Profile Photo"
+              class="profile-photo"
+            />
+            <h2 class="hero-title">&#128075; Hi! I am Bhuwan</h2>
+            <p class="hero-description">
+              I’m a designer with a passion for crafting user-centered and
+              visually appealing digital experiences. I enjoy solving problems,
+              building things, and helping people.
+            </p>
+            <p>
+              <span
+                class="typed"
+                data-typed-items="Designer, Developer, Problem Solver, Artist"
+              ></span>
+            </p>
+            <div class="hero-buttons">
+              <a href="resume.pdf" class="btn btn-primary">Resume</a>
+              <a href="#portfolio" class="btn btn-secondary">Portfolio</a>
+            </div>
           </div>
         </div>
       </section>
@@ -165,122 +168,88 @@
             </ul> -->
             <!-- End Portfolio Filters -->
 
-            <div
-              class="row gy-4 isotope-container"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-app"
-              >
+            <div class="card-container">
+              <!-- Zenbox -->
+              <div class="card" onclick="location.href='#project2';">
+                <img
+                  src="assets/img/portfolio/zenbox_cover.png"
+                  alt="Project 2"
+                  class="card-image"
+                />
+                <div class="card-content">
+                  <h2 class="card-title">ZenBox</h2>
+                  <p class="card-description">
+                    Resource Organization & Management Platform for Enhanced
+                    Learning
+                  </p>
+                  <p style="color: dimgray">UX Research and UX/UI Design</p>
+                </div>
+              </div>
+              <!-- Themefy -->
+              <div class="card" onclick="location.href='#project3';">
+                <img
+                  src="assets/img/portfolio/themefy_cover.png"
+                  alt="Project 3"
+                  class="card-image"
+                />
+                <div class="card-content">
+                  <h2 class="card-title">Themefy</h2>
+                  <p class="card-description">
+                    Bringing Creative Coding to Everyday Browsing | Chrome
+                    Extension
+                  </p>
+                  <p style="color: dimgray">
+                    UX/UI Design and Full-Cycle Product Development
+                  </p>
+                </div>
+              </div>
+              <!-- IIT-G Library Catalogue -->
+              <div class="card" onclick="location.href='#project4';">
+                <img
+                  src="assets/img/portfolio/lib_cover.png"
+                  alt="Project 4"
+                  class="card-image"
+                />
+                <div class="card-content">
+                  <h2 class="card-title">IIT-G Library Catalogue</h2>
+                  <div class="card-description">
+                    <p>
+                      Redesigned the IIT-G Library Catalogue interface to
+                      significantly reduce user search time.
+                    </p>
+                    <p style="color: dimgray">UX/UI Usability and Re-Design</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Mahua -->
+              <div class="card" onclick="location.href='#project1';">
                 <img
                   src="assets/img/portfolio/mahua.png"
-                  class="img-fluid"
-                  alt=""
+                  alt="Project 1"
+                  class="card-image"
                 />
-                <div class="portfolio-info">
-                  <h4>Mahua Spirits</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a
-                    href="assets/img/portfolio/mahua.png"
-                    title="App 1"
-                    data-gallery="portfolio-gallery-app"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="https://www.behance.net/gallery/194561719/Branding-and-Identity-Design-Mahua-Spirits"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
+                <div class="card-content">
+                  <h2 class="card-title">Mahua Spirits</h2>
+                  <div class="card-description">
+                    <p>Branding and Identity Design</p>
+                    <p style="color: dimgray">Visual Design</p>
+                  </div>
                 </div>
               </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-product"
-              >
+              <!-- <div class="card" onclick="location.href='#project1';">
                 <img
-                  src="assets/img/portfolio/product-1.jpg"
-                  class="img-fluid"
-                  alt=""
+                  src="assets/img/portfolio/mahua.png"
+                  alt="Project 1"
+                  class="card-image"
                 />
-                <div class="portfolio-info">
-                  <h4>Product 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a
-                    href="assets/img/portfolio/product-1.jpg"
-                    title="Product 1"
-                    data-gallery="portfolio-gallery-product"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
+                <div class="card-content">
+                  <h2 class="card-title">Project Title</h2>
+                  <p class="card-description">
+                    Project description goes here. This is a placeholder text
+                    that will be replaced by the actual project description.
+                  </p>
                 </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-branding"
-              >
-                <img
-                  src="assets/img/portfolio/branding-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Branding 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a
-                    href="assets/img/portfolio/branding-1.jpg"
-                    title="Branding 1"
-                    data-gallery="portfolio-gallery-branding"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
-
-              <div
-                class="col-lg-6 col-md-6 portfolio-item isotope-item filter-books"
-              >
-                <img
-                  src="assets/img/portfolio/books-1.jpg"
-                  class="img-fluid"
-                  alt=""
-                />
-                <div class="portfolio-info">
-                  <h4>Books 1</h4>
-                  <p>Lorem ipsum, dolor sit amet consectetur</p>
-                  <a
-                    href="assets/img/portfolio/books-1.jpg"
-                    title="Branding 1"
-                    data-gallery="portfolio-gallery-book"
-                    class="glightbox preview-link"
-                    ><i class="bi bi-zoom-in"></i
-                  ></a>
-                  <a
-                    href="portfolio-details.html"
-                    title="More Details"
-                    class="details-link"
-                    ><i class="bi bi-link-45deg"></i
-                  ></a>
-                </div>
-              </div>
-              <!-- End Portfolio Item -->
+              </div> -->
             </div>
             <!-- End Portfolio Container -->
           </div>
@@ -301,17 +270,28 @@
           <h2>Let's Talk</h2>
           <p>
             I am always keen to work on challenging problems with interesting
-            people. If you'd like to collaborate, discuss, /n debate or just say
-            hi, drop me a line and lets get things rolling.
+            people. If you'd like to collaborate, discuss,<br />
+            debate or just say hi, drop me a line and lets get things rolling.
           </p>
           <div
             class="social-links d-flex justify-content-center"
             style="margin: 32px"
           >
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.behance.net/mahato/"
+              ><i class="bi bi-behance"></i
+            ></a>
+            <!-- <a href="https://x.com/bhuwan8501"
+              ><i class="bi bi-twitter-x"></i>
+            </a> -->
+            <a href="https://github.com/bhuwanmahato"
+              ><i class="bi bi-github"></i
+            ></a>
+            <a href="https://www.instagram.com/i_am_bhu1/"
+              ><i class="bi bi-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/m-bhuwan/"
+              ><i class="bi bi-linkedin"></i
+            ></a>
           </div>
         </div>
         <!-- End Section Title -->
