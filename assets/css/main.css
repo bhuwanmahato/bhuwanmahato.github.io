@@ -953,12 +953,21 @@ section,
   flex-grow: 1;
   overflow: hidden;
 }
-
+.subDescription-container {
+  display: flex;
+  align-items: center;
+}
 .card-subDescription {
   color: #a6a8aa;
   font-size: 14px;
+  margin: 0px;
 }
-
+.card-identifier {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
 .blue-line {
   width: 50px; /* Full width */
   height: 3px;
@@ -968,6 +977,3 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
-}
