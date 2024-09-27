@@ -75,6 +75,7 @@ body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
+  cursor: none;
 }
 
 a {
@@ -261,6 +262,7 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
+    cursor: none;
   }
 
   .navmenu .dropdown ul {
@@ -327,7 +329,7 @@ h6 {
     font-size: 28px;
     line-height: 0;
     margin-right: 10px;
-    cursor: pointer;
+    /* cursor: pointer; */
     transition: color 0.3s;
   }
 
@@ -754,6 +756,7 @@ section,
 .hero .hero-buttons .btn-secondary:hover {
   background-color: var(--accent-color);
   color: #ffffff;
+  cursor: none;
 }
 
 .hero .hero-description {
@@ -910,7 +913,7 @@ section,
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .card:hover {
@@ -967,6 +970,31 @@ section,
   height: 14px;
   margin-right: 10px;
   border-radius: 50%;
+}
+.circle-cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  z-index: 9999;
+  transition: width 0.3s, height 0.3s, transition 0.3s;
+  opacity: 0.1;
+}
+.cursor-dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transition: opacity 0.3s;
+}
+.card:hover .circle-cursor {
+  transition: width 50px, height 50px, transition 0.3s;
 }
 .blue-line {
   width: 50px; /* Full width */
