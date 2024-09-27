@@ -155,7 +155,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #000000;
+  --background-color: #fff;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   color: var(--default-color);
@@ -217,7 +217,7 @@ h6 {
 
   .navmenu a,
   .navmenu a:focus {
-    color: var(--nav-color);
+    color: var(--nav-dropdown-color);
     font-size: 15px;
     padding: 0 2px;
     font-family: var(--nav-font);
@@ -245,7 +245,7 @@ h6 {
     height: 2px;
     bottom: -6px;
     left: 0;
-    background-color: var(--nav-hover-color);
+    background-color: var(--nav-dropdown-hover-color);
     visibility: hidden;
     width: 0px;
     transition: all 0.3s ease-in-out 0s;
@@ -261,7 +261,7 @@ h6 {
   .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
-    color: var(--nav-hover-color);
+    color: var(--nav-dropdown-hover-color);
     cursor: none;
   }
 
