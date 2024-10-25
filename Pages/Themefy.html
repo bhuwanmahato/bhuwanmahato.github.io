@@ -8,41 +8,113 @@
     <script src="/assets/js/pages.js"></script>
   </head>
   <body>
-    <section
-      class="hero"
-      style="background-image: url('/assets/img/portfolio/mahua.png')"
-    >
-      <!-- <div class="hero-content">
-        <h1>Welcome to Our Gallery</h1>
-        <p>Scroll down to explore amazing images</p>
-      </div> -->
-    </section>
-    <div class="image-container">
-      <img
-        src="/assets/img/portfolio/branding-1.jpg"
-        alt="Image 1"
-        class="gallery-image"
-      />
-      <img
-        src="/assets/img/portfolio/branding-2.jpg"
-        alt="Image 2"
-        class="gallery-image"
-      />
-      <img
-        src="/assets/img/portfolio/branding-3.jpg"
-        alt="Image 3"
-        class="gallery-image"
-      />
-      <img
-        src="/assets/img/portfolio/product-1.jpg"
-        alt="Image 4"
-        class="gallery-image"
-      />
-      <img
-        src="/assets/img/portfolio/product-2.jpg"
-        alt="Image 5"
-        class="gallery-image"
-      />
-    </div>
+    <nav class="side-nav">
+      <div class="nav-content">
+        <ul class="nav-links">
+          <li class="nav-item home-link">
+            <a href="/" class="nav-link">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="icon bi bi-arrow-left"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"
+                />
+              </svg>
+              <span>Home</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <h3>Themefy</h3>
+            <p>Designing a theme for a book store</p>
+          </li>
+          <hr class="divider" />
+          <li class="nav-item">
+            <a href="#problem" class="nav-link">Problem</a>
+          </li>
+          <hr class="divider" />
+          <li class="nav-item">
+            <a href="#approach" class="nav-link">Approach</a>
+          </li>
+          <hr class="divider" />
+          <li class="nav-item">
+            <a href="#solution" class="nav-link">Solution</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="main-content">
+      <!-- Rest of the content remains the same -->
+
+      <section id="problem" class="content-section">
+        <div class="section-content">
+          <h2>Problem</h2>
+          <img
+            src="/assets/img/portfolio/mahua.jpg"
+            alt="Problem visualization"
+            class="gallery-image"
+          />
+          <img
+            src="/assets/img/portfolio/mahua.jpg"
+            alt="Problem details"
+            class="gallery-image"
+          />
+        </div>
+      </section>
+
+      <section id="approach" class="content-section">
+        <div class="section-content">
+          <h2>Approach</h2>
+          <img
+            src="/assets/img/portfolio/books-1.jpg"
+            alt="Approach visualization"
+            class="gallery-image"
+          />
+          <img
+            src="/assets/img/portfolio/books-1.jpg"
+            alt="Approach details"
+            class="gallery-image"
+          />
+        </div>
+      </section>
+
+      <section id="solution" class="content-section">
+        <div class="section-content">
+          <h2>Solution</h2>
+          <img
+            src="/assets/img/portfolio/books-2.jpg"
+            alt="Solution visualization"
+            class="gallery-image"
+          />
+          <img
+            src="/assets/img/portfolio/themefy_cover.png"
+            alt="Solution details"
+            class="gallery-image"
+          />
+        </div>
+      </section>
+    </main>
+
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        fill="currentColor"
+        class="bi bi-arrow-up"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5"
+        />
+      </svg>
+    </button>
   </body>
 </html>

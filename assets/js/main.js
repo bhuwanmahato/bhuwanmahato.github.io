@@ -77,25 +77,33 @@
   /**
    * Scroll top button
    */
-  let scrollTop = document.querySelector(".scroll-top");
+  // Scroll to Top functionality
+  const scrollToTopBtn = document.getElementById("scrollToTop");
 
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100
-        ? scrollTop.classList.add("active")
-        : scrollTop.classList.remove("active");
+  // Show/hide button based on scroll position
+  const toggleScrollButton = () => {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
     }
-  }
-  scrollTop.addEventListener("click", (e) => {
-    e.preventDefault();
+  };
+
+  // Initial check for scroll position
+  toggleScrollButton();
+
+  // Listen for scroll events
+  window.addEventListener("scroll", () => {
+    toggleScrollButton();
+  });
+
+  // Scroll to top when button is clicked
+  scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   });
-
-  window.addEventListener("load", toggleScrollTop);
-  document.addEventListener("scroll", toggleScrollTop);
 
   /**
    * Animation on scroll function and init
