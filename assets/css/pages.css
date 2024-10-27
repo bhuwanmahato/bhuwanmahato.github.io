@@ -122,6 +122,8 @@ html {
 .main-content {
   margin-left: 20vw; /* Same as nav width */
   width: calc(100% - 20vw);
+  padding: 0; /* Remove padding */
+  box-sizing: border-box;
 }
 
 /* Hero Section Styles */
@@ -155,8 +157,9 @@ html {
 }
 
 .section-content {
-  max-width: 1200px;
-  margin: 0px;
+  max-width: 100%; /* Allow full width */
+  margin: 0;
+  padding-right: 2rem; /* Add right padding instead of margin for better responsiveness */
 }
 
 .section-content h2 {
@@ -177,15 +180,37 @@ html {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 0.5s ease, transform 0.5s ease;
+  max-width: 100%;
+  object-fit: contain;
+  margin-bottom: 20px; /* Add space between images */
 }
 
 .gallery-image.visible {
   opacity: 1;
   transform: translateY(0);
-  margin-right: 2rem;
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .side-nav {
+    width: 25vw;
+  }
+  .main-content {
+    margin-left: 25vw;
+    width: 75vw;
+  }
+}
+
+@media (max-width: 992px) {
+  .side-nav {
+    width: 30vw;
+  }
+  .main-content {
+    margin-left: 30vw;
+    width: 70vw;
+  }
+}
+
 @media (max-width: 768px) {
   .side-nav {
     width: 100%;
@@ -208,18 +233,39 @@ html {
     margin-left: 0;
     width: 100%;
     margin-bottom: 60px;
+    padding-right: 0; /* Remove right padding on mobile */
   }
 
-  .nav-header {
+  .nav-header,
+  .nav-item p {
     display: none;
   }
-}
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
-/* Previous CSS remains the same until the end */
 
-/* Scroll to Top Button */
+  .nav-item h3 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .section-content h2 {
+    font-size: 2rem;
+    height: 20vh;
+    padding-top: 16vh;
+  }
+
+  .section-content {
+    padding-right: 10px; /* Reduce right padding on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .section-content h2 {
+    font-size: 1.5rem;
+    height: 15vh;
+    padding-top: 12vh;
+  }
+}
+
+/* Scroll Top Button */
 .scroll-to-top {
   position: fixed;
   bottom: 1rem;

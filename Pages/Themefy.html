@@ -6,6 +6,11 @@
     <title>Zenbox</title>
     <link rel="stylesheet" href="/assets/css/pages.css" />
     <script src="/assets/js/pages.js"></script>
+    <!-- Add preload links for images -->
+    <link rel="preload" as="image" href="/assets/img/themefy/themefy.png" />
+    <link rel="preload" as="image" href="/assets/img/themefy/1.png" />
+    <link rel="preload" as="image" href="/assets/img/themefy/2.png" />
+    <!-- Add preload links for all other images -->
   </head>
   <body>
     <nav class="side-nav">
@@ -54,7 +59,11 @@
 
       <section id="problem" class="content-section">
         <div class="section-content">
-          <img src="/assets/img/themefy/themefy.png" class="gallery-image" />
+          <img
+            data-src="/assets/img/themefy/themefy.png"
+            class="gallery-image"
+            alt="Themefy"
+          />
           <h2>Idea</h2>
           <img src="/assets/img/themefy/1.png" class="gallery-image" />
           <img src="/assets/img/themefy/2.png" class="gallery-image" />
