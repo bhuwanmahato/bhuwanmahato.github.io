@@ -887,7 +887,7 @@ section,
 }
 
 .card:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -897,10 +897,10 @@ section,
   background-color: #ddd;
   background-size: cover;
   background-position: center;
-  transition: transform 0.3s ease;
+  transition: transform 1s ease;
 }
 .card:hover .card-image {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .card-content {
@@ -914,7 +914,7 @@ section,
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
-  transition: color 0.3s ease;
+  transition: color 1s ease;
 }
 .card:hover .card-title {
   color: var(--accent-color);
@@ -945,13 +945,13 @@ section,
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #ffffff;
+  background-color: #ffffff; /* Changed from #3393ff to white */
   position: fixed;
   pointer-events: none;
   mix-blend-mode: difference;
   z-index: 9999;
   transition: width 0.3s, height 0.3s, transition 0.3s;
-  opacity: 0.1;
+  opacity: 1;
 }
 .cursor-dot {
   width: 10px;
