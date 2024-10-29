@@ -1,6 +1,6 @@
 /* Fonts */
 :root {
-  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Raleway", sans-serif;
@@ -153,8 +153,6 @@ html {
 } */
 
 /* Content Section Styles */
-.content-section {
-}
 
 .section-content {
   max-width: 100%; /* Allow full width */
@@ -178,16 +176,13 @@ html {
   height: auto;
   display: block;
   opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition: opacity 0.5s ease;
   max-width: 100%;
   object-fit: contain;
-  margin-bottom: 20px; /* Add space between images */
 }
 
 .gallery-image.visible {
   opacity: 1;
-  transform: translateY(0);
 }
 
 /* Responsive Design */
