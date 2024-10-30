@@ -402,7 +402,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #151515;
   font-size: 14px;
   padding: 40px 0;
   position: relative;
