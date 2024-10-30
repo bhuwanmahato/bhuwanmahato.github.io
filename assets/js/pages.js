@@ -16,132 +16,71 @@ document.addEventListener("DOMContentLoaded", () => {
     imageObserver.observe(image);
   });
 
-  // Enhanced Navigation Highlighting
-  const sections = document.querySelectorAll(".content-section, .hero");
+  const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".nav-link");
+  const scrollToTopBtn = document.getElementById("scrollToTop");
 
-  // Options for the intersection observer
-  const navOptions = {
-    rootMargin: "-50% 0px -50% 0px", // Considers element in viewport when it's in the middle 50%
-    threshold: 0,
+  // Add active class to nav items when scrolling
+  const observerOptions = {
+    root: null,
+    rootMargin: "-20% 0px -30% 0px", // Adjusted rootMargin for better detection
+    threshold: [0, 0.1, 0.5], // Multiple thresholds for better accuracy
   };
 
-  // Create a map to store section positions
-  const sectionPositions = new Map();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Remove active class from all nav links
+        navLinks.forEach((link) => link.classList.remove("active"));
 
-  // Function to update section positions
-  const updateSectionPositions = () => {
-    sections.forEach((section) => {
-      sectionPositions.set(
-        section.id,
-        section.getBoundingClientRect().top + window.scrollY
-      );
-    });
-  };
-
-  // Initial update of section positions
-  updateSectionPositions();
-
-  // Update section positions on window resize
-  window.addEventListener("resize", updateSectionPositions);
-
-  // Function to get the current section
-  const getCurrentSection = () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2;
-
-    let currentSection = "";
-    sectionPositions.forEach((position, id) => {
-      if (scrollPosition >= position) {
-        currentSection = id;
+        // Add active class to corresponding nav link
+        const targetId = entry.target.id;
+        const correspondingLink = document.querySelector(
+          `.nav-link[href="#${targetId}"]`
+        );
+        if (correspondingLink) {
+          correspondingLink.classList.add("active");
+        }
       }
     });
+  }, observerOptions);
 
-    return currentSection;
-  };
-
-  // Function to update active navigation link
-  const updateActiveLink = () => {
-    const currentSection = getCurrentSection();
-
-    navLinks.forEach((link) => {
-      const href = link.getAttribute("href");
-      if (href === "#" + currentSection) {
-        link.classList.add("active");
-      } else {
-        link.classList.remove("active");
-      }
-    });
-  };
-
-  // Update active link on scroll
-  window.addEventListener("scroll", () => {
-    updateActiveLink();
+  // Observe all sections
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 
-  // Smooth scrolling for navigation links
+  // Smooth scroll to section when clicking nav links
   navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
-      const href = link.getAttribute("href");
-
-      // Check if it's not the home link
-      if (href !== "/") {
+      if (link.getAttribute("href").startsWith("#")) {
         e.preventDefault();
-        const targetSection = document.querySelector(href);
+        const targetId = link.getAttribute("href").slice(1);
+        const targetSection = document.getElementById(targetId);
         if (targetSection) {
-          targetSection.scrollIntoView({ behavior: "smooth" });
+          targetSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
         }
       }
     });
   });
 
-  // Scroll to Top functionality
-  const scrollToTopBtn = document.getElementById("scrollToTop");
-
-  // Show/hide button based on scroll position
-  const toggleScrollButton = () => {
-    if (window.pageYOffset > 300) {
-      scrollToTopBtn.classList.add("visible");
-    } else {
-      scrollToTopBtn.classList.remove("visible");
-    }
-  };
-
-  // Initial check for scroll position and active section
-  toggleScrollButton();
-  updateActiveLink();
-
-  // Listen for scroll events
+  // Show/hide scroll to top button
   window.addEventListener("scroll", () => {
-    toggleScrollButton();
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
+    }
   });
 
-  // Scroll to top when button is clicked
+  // Scroll to top button click handler
   scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   });
-
-  // Image lazy loading
-  const lazyLoadImages = () => {
-    const images = document.querySelectorAll(".gallery-image:not([src])");
-    const imageObserver = new IntersectionObserver(
-      (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target;
-            img.src = img.dataset.src;
-            img.classList.add("visible");
-            observer.unobserve(img);
-          }
-        });
-      },
-      { rootMargin: "100px" }
-    );
-
-    images.forEach((img) => imageObserver.observe(img));
-  };
-
-  lazyLoadImages();
 });
