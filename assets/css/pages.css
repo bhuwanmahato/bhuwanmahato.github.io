@@ -268,7 +268,7 @@ html {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: #4f92ee;
+  background-color: var(--accent-color);
   border: none;
   color: white;
   cursor: pointer;
@@ -317,4 +317,16 @@ p {
   font-size: 0.8rem;
   color: var(--default-color);
   line-height: 160%;
+}
+
+/* Add Progress Bar Styles */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background: var(--accent-color);
+  z-index: 9999;
+  transition: width 0.1s ease-out;
 }

@@ -67,20 +67,42 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Show/hide scroll to top button
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.add("show");
+  // Scroll to top functionality
+  function toggleScrollButton() {
+    if (window.pageYOffset > 300) {
+      scrollToTopBtn.classList.add("visible");
     } else {
-      scrollToTopBtn.classList.remove("show");
+      scrollToTopBtn.classList.remove("visible");
     }
-  });
+  }
 
-  // Scroll to top button click handler
+  // Initial check for scroll position
+  toggleScrollButton();
+
+  // Progress bar functionality
+  const progressBar = document.querySelector(".progress-bar");
+
+  function updateProgressBar() {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    const scrolled = window.scrollY;
+    const progress = (scrolled / documentHeight) * 100;
+
+    progressBar.style.width = `${progress}%`;
+    toggleScrollButton(); // Update scroll button visibility
+  }
+
+  // Listen for scroll events - combine both functions
+  window.addEventListener("scroll", updateProgressBar);
+
+  // Scroll to top when button is clicked
   scrollToTopBtn.addEventListener("click", () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   });
+
+  // Initial progress bar update
+  updateProgressBar();
 });
