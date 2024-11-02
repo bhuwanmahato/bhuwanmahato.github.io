@@ -330,3 +330,60 @@ p {
   z-index: 9999;
   transition: width 0.1s ease-out;
 }
+
+/* Update existing side nav styles */
+.side-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 20vw;
+  background-color: var(--nav-sidebar-background-color);
+  color: white;
+  z-index: 1000;
+}
+
+.main-content {
+  margin-left: 20vw;
+  width: calc(100% - 20vw);
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Add responsive styles for mobile */
+@media (max-width: 768px) {
+  .side-nav {
+    display: none; /* Hide sidebar on mobile */
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 0px; /* Add some padding on mobile */
+  }
+
+  .section-content h2 {
+    font-size: 1.8rem; /* Smaller heading on mobile */
+    padding-top: 12vh;
+    height: 20vh;
+  }
+
+  /* Adjust scroll to top button position for mobile */
+  .scroll-to-top {
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+/* Additional mobile optimizations */
+@media (max-width: 480px) {
+  .section-content h2 {
+    font-size: 1.5rem;
+    padding-top: 10vh;
+    height: 18vh;
+  }
+
+  .main-content {
+    padding: 0 5px;
+  }
+}
