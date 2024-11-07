@@ -707,7 +707,7 @@ section,
   margin: 8px;
   padding: 10px 32px;
   font-size: 1em;
-  border-radius: 4px;
+  border-radius: 8px;
   text-decoration: none;
   background-color: transparent; /* Unselected by default */
   color: inherit; /* Inherit text color */
@@ -875,25 +875,25 @@ section,
 
 .card {
   width: 400px;
-  height: 500px;
+  height: 520px;
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border: 1px solid rgb(226, 226, 226);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   /* cursor: pointer; */
 }
 
 .card:hover {
   transform: scale(1.02);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 12px 24px rgba(150, 150, 150, 0.2);
 }
 
 .card-image {
   width: 100%;
-  height: 70%;
+  height: 65%;
   background-color: #ddd;
   background-size: cover;
   background-position: center;
@@ -916,15 +916,13 @@ section,
   margin-bottom: 10px;
   transition: color 1s ease;
 }
-.card:hover .card-title {
-  color: var(--accent-color);
-}
 
 .card-description {
   font-size: 16px;
   color: #666;
   flex-grow: 1;
   overflow: hidden;
+  margin: 0px;
 }
 .subDescription-container {
   display: flex;
@@ -934,12 +932,6 @@ section,
   color: #a6a8aa;
   font-size: 14px;
   margin: 0px;
-}
-.card-identifier {
-  width: 14px;
-  height: 14px;
-  margin-right: 10px;
-  border-radius: 50%;
 }
 .circle-cursor {
   width: 20px;
@@ -975,3 +967,26 @@ section,
 /*--------------------------------------------------------------
 # Starter Section Section
 --------------------------------------------------------------*/
+
+.tag-button-UX {
+  background-color: #e6f1f8;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 550;
+  color: #0099ff;
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-right: 8px;
+}
+.tag-button-visual {
+  background-color: #ffeff6;
+  border-radius: 20px;
+  padding: 4px 12px;
+  font-size: 12px;
+  font-weight: 550;
+  color: #ff5a01;
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-right: 8px;
+}
