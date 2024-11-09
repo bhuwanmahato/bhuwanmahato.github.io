@@ -466,3 +466,24 @@ p {
     padding: 0 5px;
   }
 }
+
+.cta-button {
+  margin-top: 10px;
+  display: inline-block;
+  padding: 8px 32px;
+  background-color: transparent; /* Unselected by default */
+  color: inherit; /* Inherit text color */
+  border: 1.5px solid rgb(200, 200, 200);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+.cta-button:hover {
+  background-color: #4f92ee;
+  color: #fff;
+}
+
+.cta-button .emoji {
+  margin-left: 4px;
+}
