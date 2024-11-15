@@ -211,7 +211,7 @@ h6 {
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-dropdown-hover-color);
-    cursor: none;
+    /*cursor: none;*/
   }
 
   .navmenu .dropdown ul {
@@ -726,7 +726,6 @@ section,
 .hero .hero-buttons .btn-secondary:hover {
   background-color: var(--accent-color);
   color: #ffffff;
-  cursor: none;
 }
 
 .hero .hero-description {
