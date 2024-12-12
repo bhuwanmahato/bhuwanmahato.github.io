@@ -628,13 +628,13 @@ section,
 
 .hero {
   width: 100%;
-  min-height: calc(100vh - 92px);
   position: relative;
   padding: 60px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  height: 60vh;
 }
 
 .hero img {
@@ -988,4 +988,69 @@ section,
   display: inline-block;
   margin-bottom: 16px;
   margin-right: 8px;
+}
+
+.scroller {
+  max-width: 100%;
+}
+
+.scroller__inner {
+  padding-block: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 1s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 30s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 1rem;
+  background: var(--clr-primary-400);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900);
 }
