@@ -120,12 +120,7 @@ html {
 .nav-item h3 {
   font-size: 1.25rem;
   margin-bottom: 0.75rem;
-  background: linear-gradient(
-    135deg,
-    var(--heading-color),
-    var(--accent-color)
-  );
-  -webkit-text-fill-color: transparent;
+  color: var(--heading-color);
   font-weight: 600;
 }
 
